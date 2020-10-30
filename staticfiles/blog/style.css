@@ -1,0 +1,10 @@
+html{
+	position:relative;
+	min-height: 100%;
+}
+
+body {
+	font-family: "Times New Roman", Times, serif;
+	/*font-family: 'Pacifico', cursive;*/
+	/* font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
+}

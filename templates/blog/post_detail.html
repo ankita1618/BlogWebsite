@@ -1,0 +1,19 @@
+{%extends 'blog/base.html'%}
+
+{%block title%}
+{{ post.title }} |  {{block.super}} 
+{%endblock%}
+
+{%block content%}
+	<h3>{{ post.title }}</h3>
+	<small> Post created by: {{ post.author}}</small>
+	<hr>
+	<p> {{post.body}} </p>
+
+	<form action="{%url 'like_post'%}" method="post">
+		{%csrf_token%}
+		<button type="submit" name="post_id" value="{{post.id}}" class="btn btn-primary">Like</button>
+	</form>
+{%endblock%}
+	
+	

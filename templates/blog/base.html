@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+	<title>{%block title %}MY BLOG{%endblock%}</title>
+	
+	<link rel="stylesheet" href="{% static 'blog\style.css' %}">
+
+</head>
+<body style="background-color:#F5A7A7">
+	{%include 'blog/navbar.html'%}
+	
+<header class="masterhead">
+	<div class="overlay"> </div>
+	<div class="container">
+		<div class="row">
+		  <div class="col-lg-8 col-md-10 mx-auto">
+			<div class="site-heading">
+			  <h1>MyBlog</h1>
+			  <span class="subheading">A Blog only for me</span>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+</header>
+	<div class="container-fluid">
+		
+	 	{% block content %}
+
+	 	{% endblock %}
+	</div>
+
+	<footer style="block-size: 10rem;">
+		<p style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: bolder; margin-top: 12rem;">Made with Love 'MyBlog' 2020</p>
+
+	</footer>
+
+	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
